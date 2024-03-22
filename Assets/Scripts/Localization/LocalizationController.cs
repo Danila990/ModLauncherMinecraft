@@ -17,13 +17,6 @@ public class LocalizationController : MonoBehaviour
 
     public E_LanguageType LanguageType => _languageType;
 
-    public void UpdateDescriptionModWindow(TMP_Text nameMod, TMP_Text descriptionMod, string id)
-    {
-       // LocalizationModData localizationModData = _localizationContainer.GetMod(id);
-
-
-    }
-
     public void SubLocalization(TMP_Text localizationText, string localizationId)
     {
         _localizationAgents.Add(new AgentData() { 

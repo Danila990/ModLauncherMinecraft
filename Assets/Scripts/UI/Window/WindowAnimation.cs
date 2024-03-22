@@ -36,6 +36,5 @@ public class WindowAnimation : MonoBehaviour
             _tween = transform.DOMoveX(transform.position.x - _rangeMove, _moveDuration).OnComplete(() => callback());
         else 
             _tween = transform.DOMoveX(transform.position.x + _rangeMove, _moveDuration).OnComplete(() => callback());
-
     }
 }
