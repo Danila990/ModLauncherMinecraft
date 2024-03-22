@@ -7,5 +7,3 @@ public class ModsContainer : ScriptableObject
 
     public ModData[] ModsData => _modsData;
 }
-
-

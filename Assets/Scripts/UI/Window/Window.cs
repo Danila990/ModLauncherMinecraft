@@ -4,12 +4,11 @@ using Zenject;
 public class Window : MonoBehaviour
 {
     [SerializeField] private E_WindowType _windowType;
-    [SerializeField] private bool _isDontDestroy = false;
-
-    public E_WindowType WindowType => _windowType;
 
     private WindowAnimation _windowAnimation;
     private WindowController _windowController;
+
+    public E_WindowType WindowType => _windowType;
 
     [Inject]
     private void Construct(WindowController windowController)

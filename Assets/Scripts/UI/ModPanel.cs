@@ -10,12 +10,14 @@ public class ModPanel : MonoBehaviour
     [SerializeField] private TMP_Text _nameModText;
 
     private DescriptionModWindow _descriptionModWindow;
+    private LocalizationController _localizationController;
     private WindowController _windowController;
     private ModData _modData;
 
     [Inject]
-    private void Construct(WindowController windowController)
+    private void Construct(WindowController windowController, LocalizationController localizationController)
     {
+        _localizationController = localizationController;
         _windowController = windowController;
         _descriptionModWindow = _windowController.GetWindow(E_WindowType.DescriptionMod) as DescriptionModWindow;
     }
@@ -34,6 +36,7 @@ public class ModPanel : MonoBehaviour
     {
         _modData = modData;
         _icon.sprite = _modData.IconPreview;
+        _localizationController.SubLocalization(_nameModText, _modData.IdName);
     }
 
     private void OnClick()
