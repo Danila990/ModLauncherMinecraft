@@ -19,7 +19,7 @@ public class DescriptionModWindow : Window
 
     public void SetupWindow(ModData modData)
     {
-        _iconMod.sprite = modData.IconDescription;
+        _iconMod.sprite = Resources.Load<Sprite>(modData.PathIconDescription);
         _nameMod.text = _localizationController.GetText(modData.IdName);
         _descriptionMod.text = _localizationController.GetText(modData.IdDescription);
     }

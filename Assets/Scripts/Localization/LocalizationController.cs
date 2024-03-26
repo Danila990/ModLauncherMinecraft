@@ -7,38 +7,36 @@ public class LocalizationController : MonoBehaviour
     private class AgentData
     {
         public TMP_Text Text;
-        public string Id;
+        public int Id;
     }
 
     [SerializeField] private LocalizationContainer _localizationContainer;
-    [SerializeField] private E_LanguageType _languageType;
+    [SerializeField] private LanguageType _languageType;
 
     private List<AgentData> _localizationAgents = new List<AgentData>();
 
-    public E_LanguageType LanguageType => _languageType;
+    public LanguageType LanguageType => _languageType;
 
-    public void SubLocalization(TMP_Text localizationText, string localizationId)
+    public void SubLocalization(TMP_Text localizationText, int id)
     {
         _localizationAgents.Add(new AgentData() { 
             Text = localizationText,
-            Id = localizationId 
+            Id = id 
         });
 
-        localizationText.text = _localizationContainer.GetText(localizationId, _languageType);
+        localizationText.text = _localizationContainer.Get(id, _languageType);
     }
 
-    public string GetText(string localizationId)
+    public string GetText(int id)
     {
-        return _localizationContainer.GetText(localizationId, _languageType);
+        return _localizationContainer.Get(id, _languageType);
     }
 
-    public void ChangeLanguage(E_LanguageType language)
+    public void ChangeLanguage(LanguageType language)
     {
         _languageType = language;
 
-        foreach (var agent in _localizationAgents) 
-        {
-            agent.Text.text = _localizationContainer.GetText(agent.Id, _languageType);
-        }
+        foreach (var agent in _localizationAgents)
+            agent.Text.text = _localizationContainer.Get(agent.Id, _languageType);
     }
 }

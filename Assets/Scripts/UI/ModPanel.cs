@@ -35,7 +35,7 @@ public class ModPanel : MonoBehaviour
     public void SetupPanel(ModData modData)
     {
         _modData = modData;
-        _icon.sprite = _modData.IconPreview;
+        _icon.sprite = Resources.Load<Sprite>(_modData.PathIconPreview);
         _localizationController.SubLocalization(_nameModText, _modData.IdName);
     }
 

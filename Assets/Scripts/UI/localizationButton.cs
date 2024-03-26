@@ -8,7 +8,7 @@ public class localizationButton : MonoBehaviour
     [Serializable]
     private class Language
     {
-        public E_LanguageType LanguageType;
+        public LanguageType LanguageType;
         public Sprite Icon;
     }
 

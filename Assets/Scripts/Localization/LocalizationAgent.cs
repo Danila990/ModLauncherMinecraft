@@ -4,12 +4,12 @@ using Zenject;
 
 public class LocalizationAgent : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _localizationText;
-    [SerializeField] private string _localizationId;
+    [SerializeField] private TMP_Text _text;
+    [SerializeField] private int _id;
 
     [Inject]
     private void Construct(LocalizationController localizationController)
     {
-        localizationController.SubLocalization(_localizationText, _localizationId);
+        localizationController.SubLocalization(_text, _id);
     }
 }

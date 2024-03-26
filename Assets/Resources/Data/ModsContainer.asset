@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a416003570f20e428bd2c80a26f6a5b, type: 3}
+  m_Name: ModsContainer
+  m_EditorClassIdentifier: 
+  _modsData:
+  - Id: 1
+    IdName: 7
+    IdDescription: 8
+    PathIconDescription: Resources/Ui/Mods/IconMod_1
+    PathIconPreview: Resources/UI/Mods/IconMod_1
+  - Id: 2
+    IdName: 9
+    IdDescription: 10
+    PathIconDescription: Resources/Ui/Mods/IconMod_2
+    PathIconPreview: Resources/UI/Mods/IconMod_2
